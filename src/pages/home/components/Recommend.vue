@@ -2,7 +2,7 @@
 	<div>
 		<div class="title">热销推荐</div>
 		<ul>
-			<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 				<img class="item-img" :src='item.imgUrl' />
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 	export default {
 		name: 'HomeRecommend',
-		data() {
-			return {
-				recommendList: [{
-					id: '0001',
-					imgUrl: 'https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_200x200_444cc7e8.jpg',
-					title: '圆明园',
-					desc: '百年皇家的珍宝,民族耻辱的见证'
-				},{
-					id: '0002',
-					imgUrl: 'https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_200x200_444cc7e8.jpg',
-					title: '圆明园',
-					desc: '百年皇家的珍宝,民族耻辱的见证'
-				},{
-					id: '0003',
-					imgUrl: 'https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_200x200_444cc7e8.jpg',
-					title: '圆明园',
-					desc: '百年皇家的珍宝,民族耻辱的见证'
-				}]
-			}
+		props: {
+			list: Array
 		}
 		}
 </script>
