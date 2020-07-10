@@ -81,6 +81,7 @@
 		width: 100%
 		overflow: hidden
 		heigth: 3.7rem
+		margin-top: .1rem
 		.icon
 			position: relative
 			overflow: hidden
